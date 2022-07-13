@@ -405,7 +405,17 @@ module.exports = function (webpackEnv) {
               test: /\.svg$/,
               use: [
                 { loader: 'svg-sprite-loader', options: {} },
-                {loader: 'svgo-loader', options: {}}
+                {loader: 'svgo-loader', options: {
+                  plugins:[
+                    {
+                      name: "removeAttrs",
+                      params: {
+                        attrs: "(fill|stroke)"
+                      }
+                    }
+                  ]
+                  }
+                }
               ]
             },
             // Process application JS with Babel.
