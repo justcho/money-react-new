@@ -2,9 +2,6 @@ import React from "react";
 import Nav from "./Nav";
 import styled from "styled-components";
 
-type Props = {
-  children:any
-}
 
 const Main = styled.div`
   flex-grow: 1;
@@ -15,11 +12,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   overflow: auto;
 `
-const Layout = (props:Props)=>{
+const Layout = (props:any)=>{
   return (
     <div>
       <Wrapper>
-        <Main>
+        <Main className={props.className}>
           {props.children}
         </Main>
         <Nav/>
