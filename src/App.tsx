@@ -4,32 +4,10 @@ import {
   Route,
   Routes,
 } from 'react-router-dom'
-import Layout from "components/Layout";
-
-const Tags = () => (
-    <Layout>
-      <h2>标签页</h2>
-    </Layout>
-)
-
-const Money = () => (
-  <Layout>
-    <h2>记账页</h2>
-  </Layout>
-)
-const Statistics = () => (
-  <Layout>
-    <h2>统计页</h2>
-  </Layout>
-)
-
-const NoMatch = () => (
-  <div>
-    <h2>页面不存在</h2>
-  </div>
-)
-
-
+import Tags from "views/Tags";
+import Money from "./views/Money";
+import Statistics from "./views/Statistics";
+import NoMatch from "./views/NoMatch";
 
 const App = () => (
   <Router>
@@ -42,4 +20,5 @@ const App = () => (
     </Routes>
   </Router>
 )
+
 export default App
