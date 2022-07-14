@@ -29,12 +29,14 @@ const TagsSection:React.FC =(props)=>{
   const [tags,setTags] = useState<string[]>(['衣','食','住','行'])
   const [selected,setSelected] = useState<string[]>([])
   const addTags = () =>{
-    const tagName = window.prompt('新标签名称为')
-    if(tagName !== null && tagName.length !== 0){
+    const tagName:any = window.prompt('新标签名称为')
+
+    if(tagName.length !== 0 ){
       setTags([...tags,tagName])
     }else{
       window.alert('标签名不为空')
     }
+
   }
   const toggleTag = (tag:string) =>{
     const index = selected.indexOf(tag)
